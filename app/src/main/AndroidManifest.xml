@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:icon="@mipmap/database"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/database"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.ApplyArrayAdapterCrudSQLite"
+            tools:targetApi="31">
+        <activity
+                android:name=".controller.MainActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".controller.contents.DetailActivity"
+                android:exported="true">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".controller.MainActivity"/>
+        </activity>
+        <!-- *** <meta-data /> it specify back button on activity bar when user clicked you can decision which activity user go on value="<Class>" -->
+        <activity
+                android:name=".controller.contents.FormActivity"
+                android:exported="true">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".controller.MainActivity"/>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:id="@+id/constraintMain"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textSize="40dp"
+            android:text="Form Employee"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTitle"
+            app:layout_constraintTop_toTopOf="@+id/constraintMain"/>
+
+    <com.google.android.material.card.MaterialCardView
+            android:clickable="true"
+            android:focusable="true"
+            style="?attr/materialCardViewFilledStyle"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            app:cardBackgroundColor="#2DB3B3B3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/cardView">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+            <LinearLayout
+                    android:layout_width="450dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fullname"
+                            android:textSize="24sp"/>
+
+                    <EditText
+                            android:id="@+id/editTextEmployeeFullname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textShortMessage"
+                            android:textSize="24sp"
+                            android:layout_marginLeft="5dp"
+                            android:singleLine="true"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Age"
+                            android:textSize="24sp"/>
+
+                    <EditText
+                            android:layout_marginLeft="60dp"
+                            android:id="@+id/editTextEmployeeAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textSize="24sp"
+                            android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="start"
+                            android:gravity="start">
+                        <RadioButton
+                                android:id="@+id/radioButtonFemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:padding="4dp"
+                                android:text="Female"
+                                android:textSize="20sp" />
+                        <RadioButton
+                                android:id="@+id/radioButtonMale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:padding="4dp"
+                                android:text="Male"
+                                android:textSize="20sp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Position"
+                            android:textSize="24sp"/>
+
+                    <EditText
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/editTextEmployeePosition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textShortMessage"
+                            android:textSize="24sp"
+                            android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Salary"
+                            android:layout_marginTop="40dp"
+                            android:textSize="24sp"/>
+
+                    <!--<SeekBar
+                            android:id="@+id/seekBar"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="40dp"
+                            android:progress="0"
+                            android:max="350000"
+                            android:min="0" />-->
+
+                    <com.google.android.material.slider.Slider
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/slider"
+                            android:valueFrom="0"
+                            android:valueTo="350000"
+                            android:layout_width="230dp"
+                            android:layout_height="40dp"
+                            android:stepSize="1000"
+                     />
+
+                    <TextView
+                            android:id="@+id/textViewValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:text="0.0 ฿"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="20sp"/>
+
+                </LinearLayout>
+
+                <!--<com.google.android.material.button.MaterialButton
+                        android:id="@+id/button"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        app:strokeColor="@color/white"
+                        app:strokeWidth="2dp"
+                        android:layout_marginTop="20dp"
+                        android:text="create"/>-->
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="create"
+                        android:textAllCaps="true"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
