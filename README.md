@@ -1,4 +1,4 @@
-# Android application works with spring boot crud mysql
+# Android application crud sqlite
 
 Developed by [ttknpde-v](https://github.com/ttknpde-v)
 
